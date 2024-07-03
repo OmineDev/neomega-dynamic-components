@@ -10,6 +10,7 @@ import (
 )
 
 // 对于 debug 框架，使用 go build -buildmode=plugin -o dynamic_component1.so main.go 编译
+// 对于 vscode，使用 go build -buildmode=plugin -o dynamic_component1.so -gcflags "all=-N -l" 编译
 // 对于 release 框架(此处存疑)，使用 go build -buildmode=plugin -trimpath -o dynamic_component1.so main.go
 
 // Exported 供 omega 调用以创建一个插件实例
