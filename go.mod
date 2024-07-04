@@ -11,10 +11,6 @@ require (
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-replace github.com/OmineDev/neomega-core => ../neomega-core
-
-replace github.com/OmineDev/neomega-backbone => ../neomega-backbone
-
 exclude github.com/pterm/pterm v0.12.40
 
 exclude github.com/pterm/pterm v0.12.65
