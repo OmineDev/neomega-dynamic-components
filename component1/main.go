@@ -15,7 +15,13 @@ import (
 
 // Exported 供 omega 调用以创建一个插件实例
 // 因为一份插件可能对应多个配置文件，所以每个配置都需要创建一个实例
-func Exported() neomega_backbone.DynamicComponent {
+func Exported(name string, challengeFn neomega_backbone.ChallengeFn) neomega_backbone.DynamicComponent {
+	// challengeFn 允许插件检查宿主程序是否满足条件，若未得到预期回答则可以终止插件
+	// if challengaFn("1+1")!=2{panic("stop")}
+	// 当然，这里一般用非对称加密就是了
+	// 当编译出来的插件文件包含多个插件的时候，可以用name选择实现
+	// if name=="a" return &A{}, if name=="b" return &B{}
+	// 默认 name=""
 	return &MyDynamicComponent{}
 }
 
