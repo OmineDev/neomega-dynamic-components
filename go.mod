@@ -3,8 +3,8 @@ module dynamic_components
 go 1.20
 
 require (
-	github.com/OmineDev/neomega-backbone v0.0.4
 	github.com/OmineDev/neomega-core v0.0.4
+	github.com/OmineDev/neomega-backbone v0.0.5
 	github.com/OmineDev/qq-bot-helper v0.0.2
 )
 
