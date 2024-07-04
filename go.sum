@@ -2,6 +2,8 @@ github.com/MarvinJWendt/testza v0.1.0 h1:4m+JkB/4e0nUlXdIa10Mg0poUz9CanQKjB3L+xe
 github.com/MarvinJWendt/testza v0.1.0/go.mod h1:7AxNvlfeHP7Z/hDQ5JtE3OKYT3XFUeLCDE2DQninSqs=
 github.com/OmineDev/neomega-backbone v0.0.5 h1:3ScEkEu+i/RrnB5H1AFmai+3aUPa6b/6qBkR1z1u0kw=
 github.com/OmineDev/neomega-backbone v0.0.5/go.mod h1:GPnIOjMXTk4d5SbZ6tg7rzlYrrFXHaj7VyRHo9hxX78=
+github.com/OmineDev/neomega-backbone v0.0.6 h1:TB1ONjQrM3ttwuxb+iCVCQHE7Ze+Ec9ZHwFKgB4AJXs=
+github.com/OmineDev/neomega-backbone v0.0.6/go.mod h1:iItMCkPI47Vp4hnKdU6obm+/Be5mN4OUfTBTPyG4g88=
 github.com/OmineDev/neomega-core v0.0.4 h1:KQ6nnPttvSaLZEQII3qURMt7jm9ACN5AjmfRs0LWW2w=
 github.com/OmineDev/neomega-core v0.0.4/go.mod h1:RZuz8AxzNnw62daaG+zkmjZIiF0UyEyEhB9bXn2AhKQ=
 github.com/OmineDev/qq-bot-helper v0.0.2 h1:tV2kI1Qb6TzbPldV3WWLveCdlXMCijJ8zFAtkUp0RSI=

@@ -12,20 +12,20 @@ import (
 // 对于 直接运行(go run .)框架，使用 go build -buildmode=plugin -o dynamic_component1.so main.go 编译
 // 对于 vscode，使用 go build -buildmode=plugin -o dynamic_component1.so -gcflags "all=-N -l" 编译
 // 对于 release 框架(此处存疑)，使用 go build -buildmode=plugin -trimpath -o dynamic_component1.so main.go
-
 // Exported 供 omega 调用以创建一个插件实例
-// 因为一份插件可能对应多个配置文件，所以每个配置都需要创建一个实例
-func Exported(name string, challengeFn neomega_backbone.ChallengeFn) neomega_backbone.DynamicComponent {
-	// challengeFn 允许插件检查宿主程序是否满s足条件，若未得到预期回答则可以终止插件
-	// if challengaFn("1+1")!=2{panic("stop")}
-	// 当然，这里一般用非对称加密就是了
-	// 当编译出来的插件文件包含多个插件的时候，可以用name选择实现
-	// if name=="a" return &A{}, if name=="b" return &B{}
-	// 默认 name=""
-	return &MyDynamicComponent{}
-}
+var Exported neomega_backbone.DynamicComponentFactory
 
 func init() {
+	// 因为一份插件可能对应多个配置文件，所以每个配置都需要创建一个实例
+	Exported=func(name string, challengeFn neomega_backbone.ChallengeFn) neomega_backbone.DynamicComponent {
+		// challengeFn 允许插件检查宿主程序是否满s足条件，若未得到预期回答则可以终止插件
+		// if challengaFn("1+1")!=2{panic("stop")}
+		// 当然，这里一般用非对称加密就是了
+		// 当编译出来的插件文件包含多个插件的时候，可以用name选择实现
+		// if name=="a" return &A{}, if name=="b" return &B{}
+		// 默认 name=""
+		return &MyDynamicComponent{}
+	}
 	func(neomega_backbone.DynamicComponentFactory){}(Exported)
 	fmt.Println("dynamic component 1 程序成功被读取")
 }
